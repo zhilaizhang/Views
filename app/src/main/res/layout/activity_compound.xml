@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,17 +11,18 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".activity.MainActivity">
 
-    <Button
-        android:id="@+id/nav_view_button"
-        android:text="nav_view"
-        android:onClick="navViewButton"
+    <com.zlzhang.views.views.cutom_compound_view.CustomRadioView
+        android:id="@+id/custom_radio_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/custom_compound_button"
-        android:onClick="customCompoundButton"
-        android:text="custom_compound_button"
+    <View
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <com.zlzhang.views.views.cutom_compound_view.CustomCheckBoxView
+        android:id="@+id/custom_check_boxView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"/>
 </LinearLayout>

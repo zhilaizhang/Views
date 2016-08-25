@@ -17,6 +17,8 @@
         </activity>
 
         <activity android:name=".activity.NavViewActivity"/>
+
+        <activity android:name=".activity.CustomCompoundActivity"/>
     </application>
 
 </manifest>

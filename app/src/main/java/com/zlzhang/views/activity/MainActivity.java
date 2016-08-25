@@ -12,7 +12,7 @@ import com.zlzhang.views.model.ItemModel;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity{
 
     private Context mContext;
     private Button mNavViewButton;
@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mContext = this;
         initView();
-        initListener();
         initData();
     }
 
@@ -45,18 +44,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    private void initListener() {
-        mNavViewButton.setOnClickListener(this);
+
+    public void customCompoundButton(View view) {
+        startActivity(new Intent(MainActivity.this, CustomCompoundActivity.class));
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.nav_view_button:
-                Intent intent = new Intent();
-                intent.setClass(MainActivity.this, NavViewActivity.class);
-                startActivity(intent);
-                break;
-        }
+    public void navViewButton(View view) {
+        startActivity(new Intent(MainActivity.this, NavViewActivity.class));
     }
 }
